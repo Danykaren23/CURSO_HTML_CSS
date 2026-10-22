@@ -1,100 +1,456 @@
+
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:1rem 5%;
-    background:#0f172a;
-    color:white;
+
+html {
+    scroll-behavior: smooth;
 }
-.logo{
-    display:flex;
-    align-items:center;
-    gap:0.8rem;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    line-height: 1.6;
 }
-.logo img{
-    width:50px;
-    height:50px;
-    border-radius:50%;
+
+h1:first-child {
+    padding: 10px 5%;
+    background: white;
+    color: #301fc9;
+    font-size: 28px;
 }
-.nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:1rem;
+
+a {
+    text-decoration: none;
 }
-.nav a:hover{color:#38bdf8;}
-.banner{
-    display:flex;
-    align-items:center;
-    padding:3rem 5%;
-    gap:2rem;
-    background:#e0f2fe;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 18px 7%;
+    background: #1080db;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
-.banner-content h1{font-size:2rem;margin-bottom:1rem;}
-.banner-content p{margin-bottom:1.5rem;}
-.btn{
-    background:#0284c7;
-    color:white;
-    padding:0.7rem 1.4rem;
-    border-radius:6px;
-    text-decoration:none;
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #42ded5;
+    font-size: 28px;
+    font-weight: bold;
 }
-.catalogo{padding:3rem 5%;}
-.catalogo h2{text-align:center;margin-bottom:2rem;}
-.grid-productos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:1.5rem;
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
 }
-.tarjeta{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    border:1px solid #cbd5e1;
-    border-radius:10px;
-    padding:1rem;
-    background:white;
-    transition:transform 0.3s ease;
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
 }
-.tarjeta:hover{transform:translateY(-8px);box-shadow:0 4px 12px rgba(0,0,0,0.1);}
-.tarjeta img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:0.8rem;}
-.tarjeta h3{margin:0.5rem 0;}
-.tarjeta p{text-align:center;margin:0.3rem 0;}
-.precio{font-weight:bold;color:#065f46;font-size:1.1rem;}
-.btn-card{
-    margin-top:auto;
-    background:#16a34a;
-    color:white;
-    border:none;
-    padding:0.6rem 1.2rem;
-    border-radius:6px;
-    cursor:pointer;
+
+.nav a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
 }
-.beneficios{padding:3rem 5%;background:#f8fafc;}
-.beneficios h2{text-align:center;margin-bottom:2rem;}
-.flex-beneficios{
-    display:flex;
-    gap:1.5rem;
-    flex-wrap:wrap;
-    justify-content:center;
+
+.nav a:hover {
+    color: #42ded5;
 }
-.beneficio{
-    flex:1;
-    min-width:220px;
-    background:white;
-    padding:1.5rem;
-    border-radius:10px;
-    text-align:center;
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    padding: 60px 7%;
+    background: linear-gradient(135deg, #e7f5fa, #d7efff);
 }
-.footer{background:#0f172a;color:white;padding:2rem 5%;}
-.footer-contenido{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;}
-.footer-contenido nav a{color:#94a3b8;text-decoration:none;margin:0 0.5rem;}
-@media(max-width:768px){
-    .header{flex-direction:column;gap:1rem;}
-    .banner{flex-direction:column;text-align:center;}
+
+.banner-content h1 {
+    margin-bottom: 18px;
+    color: #101b2b;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+}
+
+.banner-content p {
+    margin-bottom: 22px;
+    color: #475569;
+}
+
+.banner > img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(16, 27, 43, 0.16);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #087fbd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #075985;
+    transform: translateY(-3px);
+}
+
+.catalogo,
+.beneficios {
+    padding: 60px 7%;
+}
+
+.catalogo h2,
+.beneficios h2 {
+    margin-bottom: 35px;
+    text-align: center;
+    color: #101b2b;
+    font-size: 32px;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 20px;
+    background: #ffffff;
+    border: 2px solid #d1ddeb;
+    border-radius: 15px;
+    box-shadow: 0 4px 14px rgba(16, 27, 43, 0.08);
+    transition: background 0.4s ease,
+                border-color 0.4s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.grid-productos .tarjeta:nth-child(1) {
+    background: #e8f2ff;
+    border-color: #60a5fa;
+}
+
+.grid-productos .tarjeta:nth-child(2) {
+    background: #e6faed;
+    border-color: #4ade80;
+}
+
+.grid-productos .tarjeta:nth-child(3) {
+    background: #f1eaff;
+    border-color: #a78bfa;
+}
+
+.grid-productos .tarjeta:nth-child(4) {
+    background: #fff0df;
+    border-color: #fb923c;
+}
+
+.grid-productos .tarjeta:nth-child(5) {
+    background: #dffaff;
+    border-color: #22d3ee;
+}
+
+.grid-productos .tarjeta:nth-child(6) {
+    background: #ffe8f1;
+    border-color: #f472b6;
+}
+
+.grid-productos .tarjeta:nth-child(1):hover {
+    background: #bfdbfe;
+    border-color: #2563eb;
+}
+
+.grid-productos .tarjeta:nth-child(2):hover {
+    background: #bbf7d0;
+    border-color: #16a34a;
+}
+
+.grid-productos .tarjeta:nth-child(3):hover {
+    background: #ddd6fe;
+    border-color: #7c3aed;
+}
+
+.grid-productos .tarjeta:nth-child(4):hover {
+    background: #fed7aa;
+    border-color: #ea580c;
+}
+
+.grid-productos .tarjeta:nth-child(5):hover {
+    background: #a5f3fc;
+    border-color: #0891b2;
+}
+
+.grid-productos .tarjeta:nth-child(6):hover {
+    background: #fbcfe8;
+    border-color: #db2777;
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 28px rgba(16, 27, 43, 0.18);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    background: #e7edf3;
+}
+
+.tarjeta h3 {
+    margin: 18px 18px 8px;
+    color: #101b2b;
+    font-size: 19px;
+}
+
+.tarjeta p {
+    margin: 0 18px 10px;
+    color: #475569;
+    font-size: 14px;
+}
+
+.tarjeta .precio {
+    margin-top: auto;
+    padding-top: 8px;
+    color: #075985;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.btn-card {
+    align-self: flex-start;
+    margin: 10px 18px 0;
+    padding: 10px 16px;
+    background: #101b2b;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-card:hover {
+    background: #087fbd;
+    transform: translateY(-2px);
+}
+
+.beneficios {
+    background: linear-gradient(135deg, #e7f5fa, #f4f7fb);
+}
+
+.flex-beneficios {
+    display: flex;
+    align-items: stretch;
+    gap: 22px;
+}
+
+.beneficio {
+    flex: 1;
+    padding: 25px;
+    background: rgb(218, 238, 162);
+    border: 1px solid #080808;
+    border-radius: 13px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(16, 27, 43, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(16, 27, 43, 0.1);
+}
+
+.beneficio h3 {
+    margin-bottom: 10px;
+    color: #087fbd;
+}
+
+.beneficio p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.footer {
+    padding: 35px 7% 20px;
+    background: #101b2b;
+    color: white;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-bottom: 25px;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+    color: #76f54f;
+    font-size: 19px;
+}
+
+.footer p {
+    color: #d0dbe7;
+    font-size: 14px;
+}
+
+.footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer nav a {
+    color: #949597;
+}
+
+.footer nav a:hover {
+    color: #42ded5;
+}
+
+.footer > p:last-child {
+    padding-top: 18px;
+    border-top: 1px solid #394658;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .banner {
+        grid-template-columns: 1fr;
+    }
+
+    .banner > img {
+        height: 300px;
+    }
+
+    .grid-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .header {
+        padding: 18px 5%;
+    }
+
+    .catalogo,
+    .beneficios {
+        padding: 50px 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1:first-child {
+        font-size: 22px;
+    }
+
+    .header {
+        position: static;
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .nav {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .banner {
+        padding: 35px 5%;
+        gap: 25px;
+    }
+
+    .banner-content h1 {
+        font-size: 32px;
+    }
+
+    .banner > img {
+        height: 230px;
+    }
+
+    .catalogo,
+    .beneficios {
+        padding: 40px 5%;
+    }
+
+    .catalogo h2,
+    .beneficios h2 {
+        font-size: 26px;
+    }
+
+    .grid-productos {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .tarjeta img {
+        height: 230px;
+    }
+
+    .flex-beneficios {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+    }
+
+    .footer nav {
+        gap: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
 }
