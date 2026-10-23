@@ -1,0 +1,125 @@
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #0a0a0a;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+    background-color: #9ff7f2;
+    gap: 4px;
+    padding: 30px 20px;
+}
+
+/* Contenedores laterales */
+.chat-container .bubble-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.chat-container .bubble-container.left {
+    align-items: flex-start;
+}
+
+.chat-container .bubble-container.right {
+    align-items: flex-end;
+}
+
+.chat-container .bubble-container .bubble {
+    max-width: 75%;
+    position: relative;
+}
+
+/* Pico - Burbuja izquierda */
+.chat-container
+  .bubble-container.left
+  .bubble:first-child
+  .bubble-text
+  > div::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: solid 6px #202c33;
+    border-top: solid 6px #202c33;
+    border-left: solid 6px transparent;
+    border-bottom: solid 6px transparent;
+    left: -5px;
+    top: 0;
+    z-index: 1;
+}
+
+/* Pico - Burbuja derecha */
+.chat-container
+  .bubble-container.right
+  .bubble:first-child
+  .bubble-text
+  > div::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: solid 6px #005c4b;
+    border-top: solid 6px #005c4b;
+    border-right: solid 6px transparent;
+    border-bottom: solid 6px transparent;
+    right: -5px;
+    top: 0;
+    z-index: 1;
+}
+
+/* Contenido de la burbuja */
+.chat-container .bubble-container .bubble .bubble-text {
+    color: #e9edef;
+    font-size: 14.5px;
+    line-height: 1.4;
+}
+
+.chat-container .bubble-container .bubble .bubble-text > div {
+    position: relative;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+/* Colores de fondo */
+.chat-container .bubble-container.right .bubble .bubble-text > div {
+    background-color: #005c4b;
+    border-top-right-radius: 2px;
+}
+
+.chat-container .bubble-container.left .bubble .bubble-text > div {
+    background-color: #202c33;
+    border-top-left-radius: 2px;
+}
+
+/* Hora y palomitas */
+.chat-container .bubble-container .bubble .bubble-text .bubble-info {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
+.bubble-info .check {
+    font-size: 11px;
+    user-select: none;
+}
+
+.bubble-info .check.seen {
+    color: #53bdeb;
+}
