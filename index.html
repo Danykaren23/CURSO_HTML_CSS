@@ -1,172 +1,254 @@
-
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Tecnológico - Tecnology</title>
-    <link rel="stylesheet" href="estilos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Catálogo Tecnológico - Tecnology</title>
+
+<link rel="stylesheet" href="estilos.css">
+
+
 </head>
 <body>
 
-    <h1>MI PAGINA WEB DE TECNOLOGIAS</h1>
+<h1>MI PAGINA WEB DE TECNOLOGIAS</h1>
 
-    <header class="header">
-        <div class="logo">
-            <img src="imagen/logo.png" alt="Logo Tecnology">
-            <span>Tecnology</span>
+<header class="header">
+    <div class="logo">
+        <img src="imagen/logo.png" alt="Logo Tecnology">
+        <span>Tecnology</span>
+    </div>
+
+    <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section id="inicio" class="banner">
+    <div class="banner-content">
+        <h1>Encuentra tu Equipo Tecnológico Ideal en nuestra tienda TECNOLOGY</h1>
+
+        <p>
+            Tenemos una amplia gama de equipos informáticos
+            para casa, estudio y trabajo.
+        </p>
+
+        <a href="#catalogo" class="btn">Explorar Productos</a>
+    </div>
+
+    <img src="imagen/principal.jpg" alt="Equipos tecnológicos">
+</section>
+
+<section id="catalogo" class="catalogo">
+    <h2>Nuestro Catálogo</h2>
+
+    <div class="grid-productos">
+
+        <article class="tarjeta">
+            <img src="imagen/laptop.jpg" alt="Laptop">
+            <h3>Laptop</h3>
+            <p>Marca: TechPro</p>
+            <p>Procesador Intel Core i5, memoria RAM de 8 GB y almacenamiento SSD de 512 GB.</p>
+            <p class="precio">S/ 899</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/computadora.jpg" alt="Computadora de escritorio">
+            <h3>Computadora de escritorio</h3>
+            <p>Procesador AMD Ryzen 5.</p>
+            <p>Memoria RAM de 16 GB, disco SSD de 512 GB y excelente rendimiento para estudiar y trabajar.</p>
+            <p class="precio">S/ 749</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/teclado.jpg" alt="Teclado mecánico">
+            <h3>Teclado mecánico</h3>
+            <p>Conexión USB-C.</p>
+            <p>Teclas resistentes, respuesta rápida y diseño cómodo para escribir o jugar.</p>
+            <p class="precio">S/ 89</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/mouse.jpg" alt="Mouse inalámbrico">
+            <h3>Mouse inalámbrico</h3>
+            <p>Conexión Bluetooth 5.0.</p>
+            <p>Diseño ergonómico, precisión óptica y libertad de movimiento para trabajar.</p>
+            <p class="precio">S/ 45</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/router.jpg" alt="Router Wi-Fi">
+            <h3>Router Wi-Fi</h3>
+            <p>Velocidad de hasta 1200 Mbps.</p>
+            <p>Conexión inalámbrica para varios dispositivos, ideal para el hogar y la oficina.</p>
+            <p class="precio">S/ 159</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/sdd.jpg" alt="Disco SSD">
+            <h3>Disco SSD</h3>
+            <p>Capacidad de 1 TB.</p>
+            <p>Almacenamiento rápido para guardar documentos, programas, fotos y videos.</p>
+            <p class="precio">S/ 199</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/impresora.jpg" alt="Impresora multifuncional">
+            <h3>Impresora multifuncional</h3>
+            <p>Impresión, escaneo y copiado.</p>
+            <p>Ideal para tareas escolares y documentos de oficina. Conectividad USB y, según el modelo, Wi-Fi.</p>
+            <p class="precio">S/ 399</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/memoria ram.jpg" alt="Memoria RAM">
+            <h3>Memoria RAM</h3>
+            <p>Capacidad de 16 GB DDR4.</p>
+            <p>Mejora la capacidad de respuesta del equipo y permite ejecutar varias aplicaciones simultáneamente.</p>
+            <p class="precio">S/ 149</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/procesador.jpg" alt="Procesador para computadora">
+            <h3>Procesador</h3>
+            <p>Modelo de referencia: AMD Ryzen 5.</p>
+            <p>Diseñado para tareas de oficina, estudio, entretenimiento y aplicaciones exigentes.</p>
+            <p class="precio">S/ 499</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/monitor.jpg" alt="Monitor LED">
+            <h3>Monitor LED</h3>
+            <p>Tamaño: 24 pulgadas.</p>
+            <p>Pantalla Full HD con imágenes nítidas, colores brillantes y excelente calidad para estudiar, trabajar o disfrutar de videos.</p>
+            <p class="precio">S/ 329</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/audifonos.jpg" alt="Audífonos inalámbricos">
+            <h3>Audífonos inalámbricos</h3>
+            <p>Conexión Bluetooth 5.3.</p>
+            <p>Sonido de buena calidad, diseño cómodo y batería recargable para escuchar música, realizar llamadas o estudiar.</p>
+            <p class="precio">S/ 79</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+        <article class="tarjeta">
+            <img src="imagen/webcamara.jpg" alt="Cámara web HD">
+            <h3>Cámara web HD</h3>
+            <p>Resolución de 1080p.</p>
+            <p>Ideal para videollamadas, clases virtuales y reuniones de trabajo. Fácil de instalar mediante conexión USB.</p>
+            <p class="precio">S/ 99</p>
+            <button class="btn-card">Ver detalles</button>
+        </article>
+
+    </div>
+</section>
+
+<section id="beneficios" class="beneficios">
+    <h2>Nuestros Beneficios</h2>
+
+    <div class="flex-beneficios">
+
+        <div class="beneficio">
+            <h3>Garantía oficial</h3>
+            <p>Productos con garantía según las condiciones del fabricante.</p>
         </div>
 
-        <nav class="nav">
+        <div class="beneficio">
+            <h3>Soporte técnico</h3>
+            <p>Atención y asesoramiento para instalar tus equipos.</p>
+        </div>
+
+        <div class="beneficio">
+            <h3>Gran variedad</h3>
+            <p>Equipos y accesorios para diferentes necesidades y presupuestos.</p>
+        </div>
+
+        <div class="beneficio">
+            <h3>Envíos a domicilio</h3>
+            <p>Recibe tus productos tecnológicos en la comodidad de tu hogar, con entregas seguras y atención durante el proceso de compra.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer id="contacto" class="footer">
+
+    <div class="footer-contenido">
+
+        <div class="footer-contacto">
+            <h4>Contacto</h4>
+            <p>Teléfono: 928817325</p>
+            <p>Correo: info@Tecnology.pe</p>
+        </div>
+
+        <div class="redes-sociales">
+            <h4>Síguenos en nuestras redes</h4>
+
+            <div class="iconos-redes">
+
+                <a href="https://www.facebook.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <img src="imagen/facebook.png" alt="Facebook">
+                </a>
+
+                <a href="https://www.instagram.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <img src="imagen/instagram.png" alt="Instagram">
+                </a>
+
+                <a href="https://www.tiktok.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+                    <img src="imagen/tik tok.png" alt="TikTok">
+                </a>
+
+                <a href="https://wa.me/51928817325"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="WhatsApp">
+                    <img src="imagen/whatsapp.png" alt="WhatsApp">
+                </a>
+
+            </div>
+        </div>
+
+        <nav class="footer-nav">
+            <h4>Enlaces rápidos</h4>
             <a href="#inicio">Inicio</a>
             <a href="#catalogo">Catálogo</a>
             <a href="#beneficios">Beneficios</a>
-            <a href="#contacto">Contacto</a>
         </nav>
-    </header>
 
-    <section id="inicio" class="banner">
-        <div class="banner-content">
-            <h1>Encuentra tu Equipo Tecnológico Ideal en nuestra tienda TECNOLOGY</h1>
-            <p>Tenemos una amplia gama de equipos informáticos para casa, estudio y trabajo.</p>
-            <a href="#catalogo" class="btn">Explorar Productos</a>
-        </div>
+    </div>
 
-        <img src="imagen/principal.jpg" alt="Equipos tecnológicos">
-    </section>
+    <p class="copyright">
+        &copy; 2026 Tecnology - Todos los derechos reservados
+    </p>
 
-    <section id="catalogo" class="catalogo">
-        <h2>Nuestro Catálogo</h2>
+</footer>
 
-        <div class="grid-productos">
-
-            <article class="tarjeta">
-                <img src="imagen/laptop.jpg" alt="Laptop">
-                <h3>Laptop</h3>
-                <p>Marca: TechPro</p>
-                <p>Procesador Intel Core i5, memoria RAM de 8 GB y almacenamiento SSD de 512 GB.</p>
-                <p class="precio">S/ 899</p>
-                <button class="btn-card">Ver detalles</button>
-            </article>
-
-            <article class="tarjeta">
-                <img src="imagen/computadora.jpg" alt="Computadora de escritorio">
-                <h3>Computadora de escritorio</h3>
-                <p>Procesador AMD Ryzen 5.</p>
-                <p>Memoria RAM de 16 GB, disco SSD de 512 GB y excelente rendimiento para estudiar y trabajar.</p>
-                <p class="precio">S/ 749</p>
-                <button class="btn-card">Ver detalles</button>
-            </article>
-
-            <article class="tarjeta">
-                <img src="imagen/teclado.jpg" alt="Teclado mecánico">
-                <h3>Teclado mecánico</h3>
-                <p>Conexión USB-C.</p>
-                <p>Teclas resistentes, respuesta rápida y diseño cómodo para escribir o jugar.</p>
-                <p class="precio">S/ 89</p>
-                <button class="btn-card">Ver detalles</button>
-            </article>
-
-            <article class="tarjeta">
-                <img src="imagen/mouse.jpg" alt="Mouse inalámbrico">
-                <h3>Mouse inalámbrico</h3>
-                <p>Conexión Bluetooth 5.0.</p>
-                <p>Diseño ergonómico, precisión óptica y libertad de movimiento para trabajar.</p>
-                <p class="precio">S/ 45</p>
-                <button class="btn-card">Ver detalles</button>
-            </article>
-
-            <article class="tarjeta">
-                <img src="imagen/router.jpg" alt="Router Wi-Fi">
-                <h3>Router Wi-Fi</h3>
-                <p>Velocidad de hasta 1200 Mbps.</p>
-                <p>Conexión inalámbrica para varios dispositivos, ideal para el hogar y la oficina.</p>
-                <p class="precio">S/ 159</p>
-                <button class="btn-card">Ver detalles</button>
-            </article>
-
-            <article class="tarjeta">
-                <img src="imagen/sdd.jpg" alt="Disco SSD">
-                <h3>Disco SSD</h3>
-                <p>Capacidad de 1 TB.</p>
-                <p>Almacenamiento rápido para guardar documentos, programas, fotos y videos.</p>
-                <p class="precio">S/ 199</p>
-                <button class="btn-card">Ver detalles</button>
-            </article>
-
-            <article class="tarjeta">
-                <img src="imagen/impresora.jpg" alt="Impresora multifuncional">
-                <h3>Impresora multifuncional</h3>
-                <p>Impresión, escaneo y copiado.</p>
-                <p>Ideal para tareas escolares y documentos de oficina. Conectividad USB y, según el modelo, Wi-Fi.</p>
-                <p class="precio">S/ 399</p>
-                <button class="btn-card">Ver detalles</button>
-            </article>
-
-            <article class="tarjeta">
-                <img src="imagen/memoria ram.jpg" alt="Memoria RAM">
-                <h3>Memoria RAM</h3>
-                <p>Capacidad de 16 GB DDR4.</p>
-                <p>Mejora la capacidad de respuesta del equipo y permite ejecutar varias aplicaciones simultáneamente.</p>
-                <p class="precio">S/ 149</p>
-                <button class="btn-card">Ver detalles</button>
-            </article>
-
-            <article class="tarjeta">
-                <img src="imagen/procesador.jpg" alt="Procesador para computadora">
-                <h3>Procesador</h3>
-                <p>Modelo de referencia: AMD Ryzen 5.</p>
-                <p>Diseñado para tareas de oficina, estudio, entretenimiento y aplicaciones exigentes.</p>
-                <p class="precio">S/ 499</p>
-                <button class="btn-card">Ver detalles</button>
-            </article>
-
-
-        </div>
-    </section>
-
-    <section id="beneficios" class="beneficios">
-        <h2>Nuestros Beneficios</h2>
-
-        <div class="flex-beneficios">
-
-            <div class="beneficio">
-                <h3>Garantía oficial</h3>
-                <p>Productos con garantía según las condiciones del fabricante.</p>
-            </div>
-
-            <div class="beneficio">
-                <h3>Soporte técnico</h3>
-                <p>Atención y asesoramiento para instalar tus equipos.</p>
-            </div>
-
-            <div class="beneficio">
-                <h3>Gran variedad</h3>
-                <p>Equipos y accesorios para diferentes necesidades y presupuestos.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <footer id="contacto" class="footer">
-        <div class="footer-contenido">
-
-            <div>
-                <h4>Contacto</h4>
-                <p>Teléfono: 928817325</p>
-                <p>Correo: info@Tecnology.pe</p>
-            </div>
-
-            <nav>
-                <a href="#inicio">Inicio</a>
-                <a href="#catalogo">Catálogo</a>
-                <a href="#beneficios">Beneficios</a>
-            </nav>
-
-        </div>
-
-        <p>&copy; 2026 Tecnology - Todos los derechos reservados</p>
-    </footer>
 
 </body>
 </html>
