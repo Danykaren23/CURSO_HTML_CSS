@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(139, 137, 137);
+}
+h1{
+    text-align: center;
+    color: #57ee1c;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.personas-container {
+    margin: 100px auto;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.personas-container .persona {
+    position: relative;
+    margin-right: -25px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.personas-container .persona img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: solid 3px rgb(117, 228, 236);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.personas-container .persona:hover img {
+    transform: scale(1.15);
+    z-index: 10;
+}
+
+.personas-container .persona .name {
+    position: absolute;
+    background-color: rgb(71, 8, 218);
+    border-radius: 8px;
+    color: rgb(249, 253, 253);
+    display: none;
+    min-width: 120px;
+    width: 160px;
+    top: -65px;
+    left: calc(-50% - 35px);
+    padding: 12px 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.personas-container .persona .name .text {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.personas-container .persona .name::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -19px;
+    transform: translateX(-50%);
+    border-top: solid 10px rgb(71, 8, 218);
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-bottom: solid 10px transparent;
+}
+
+.personas-container .persona:hover .name {
+    display: inline-block;
+}

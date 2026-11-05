@@ -1,0 +1,191 @@
+:root {
+  --size: 90px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Segoe+UI:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.instagram-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-bottom: 25px;
+}
+
+.instagram-header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  font-weight: normal;
+  background: none;
+  -webkit-background-clip: unset;
+  color: #fff;
+  margin: 0;
+}
+
+.icons {
+  display: flex;
+  gap: 28px;
+  font-size: 30px;
+  align-items: center;
+}
+
+.message-icon {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.stories-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  margin: 0 0 30px 0;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.stories-container .story {
+  width: var(--size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stories-container .story .outer-border {
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 3px;
+  position: relative;
+}
+
+/* Borde con degradado para historias activas */
+.stories-container .story .outer-border.has-story {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962ffb);
+}
+
+/* Borde especial para TU historia */
+.stories-container .story .outer-border.own-story {
+  background: #262626;
+  border: 2px solid #333;
+}
+
+/* Icono + */
+.plus-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #0095f6;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  border: 2px solid black;
+  color: white;
+}
+
+.stories-container .story .border {
+  background: #000;
+  width: calc(var(--size) - 8px);
+  height: calc(var(--size) - 8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 3px;
+  overflow: hidden;
+}
+
+.stories-container .story .border a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.stories-container .story .border img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.stories-container .story .name {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0;
+  font-weight: 500;
+  font-size: 12px;
+  width: var(--size);
+  color: #e0e0e0;
+}
+
+/* Sección inferior */
+.bottom-story {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 10px;
+}
+
+.bottom-story .outer-border {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962ffb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-story .border {
+  background: #000;
+  width: calc(var(--size) - 8px);
+  height: calc(var(--size) - 8px);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bottom-story .border img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

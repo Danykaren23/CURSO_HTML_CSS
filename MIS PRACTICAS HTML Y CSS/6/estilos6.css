@@ -1,0 +1,85 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(243, 150, 197);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    color: rgb(8, 8, 8);
+    font-family: BatangChe;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.progressbar-container{
+    width: 200px;
+    height: 200px;
+}
+
+.progressbar-container .outer-box{
+    background-color: rgb(141, 206, 223);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.progressbar-container .inner-box{
+    background-color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+svg{
+    position: absolute;
+    transform: rotate(-100deg);
+}
+
+circle{
+    fill: none;
+    stroke-width: 20px;
+    stroke-linecap: round;
+    stroke-dasharray: 472;
+}
+
+.progressbar-container:nth-child(1) circle{
+    stroke: url(#GradientColor1);
+    stroke-dashoffset: 472;
+    animation: loading100 3s linear forwards;
+}
+
+/* Segundo círculo (100%) */
+.progressbar-container:nth-child(2) circle{
+    stroke: url(#GradientColor2);
+    stroke-dashoffset: 472;
+    animation: loading100 2s linear forwards;
+}
+
+@keyframes loading50{
+    100%{
+        stroke-dashoffset: 236;
+    }
+}
+
+@keyframes loading100{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}

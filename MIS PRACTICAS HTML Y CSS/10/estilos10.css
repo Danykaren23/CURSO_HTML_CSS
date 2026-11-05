@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f09042;
+}
+
+h1{
+    text-align: center;
+    color: rgb(35, 231, 35);
+    font-family: BatangChe;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #f7f7f70c;
+  color: rgb(16, 17, 17);
+}
+
+.flip-card-front img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Título dentro de la tarjeta */
+.flip-card-back h1 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+
+/* Texto de abajo */
+.flip-card-back p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* Color rojo */
+.rojo .flip-card-back {
+  background-color: #e63946;
+  color: white;
+}
+
+.rojo .flip-card-back h1 {
+  color: white;
+}
+
+.rojo .flip-card-back p {
+  color: #ffd6d6;
+}
+
+
+/* Color amarillo */
+.amarillo .flip-card-back {
+  background-color: #f4d35e;
+  color: black;
+}
+
+.amarillo .flip-card-back h1 {
+  color: black;
+}
+
+.amarillo .flip-card-back p {
+  color: #6b4f00;
+}
+
+
+/* Color celeste */
+.celeste .flip-card-back {
+  background-color: #5dade2;
+  color: white;
+}
+
+.celeste .flip-card-back h1 {
+  color: white;
+}
+
+.celeste .flip-card-back p {
+  color: #e6f7ff;
+}
+
+
+/* Color blanco */
+.blanco .flip-card-back {
+  background-color: white;
+  color: rgb(189, 233, 108);
+}
+
+.blanco .flip-card-back h1 {
+  color: black;
+}
+
+.blanco .flip-card-back p {
+  color: #555555;
+}

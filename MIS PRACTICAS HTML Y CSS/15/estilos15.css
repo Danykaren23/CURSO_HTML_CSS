@@ -1,0 +1,148 @@
+body {
+  background-color: aqua;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+.modal-container {
+  background-color: rgba(21, 112, 224, 0.4);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+
+.modal-container .modal {
+  width: 600px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 25px 20px 10px;
+  box-sizing: border-box;
+  border: 3px solid #000000;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+  position: relative;
+}
+
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 25px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+
+.close:hover {
+  color: red;
+}
+
+
+.modal-container .modal .content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+.modal-container .modal .content .icon {
+  margin-right: 10px;
+}
+
+
+.modal-container .modal .content .message .title h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+
+.modal-container .modal .content .message .text {
+  color: #222;
+  font-size: 14px;
+}
+
+
+.modal-container .modal .actions {
+  padding: 10px 0;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+
+.modal-container .modal .actions button[class*="btn"] {
+  border: none;
+  padding: 15px;
+  min-width: 120px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.modal-container .modal .actions .btn-confirm {
+  background-color: #0684c4;
+  color: white;
+}
+
+
+.modal-container .modal .actions .btn-confirm:hover {
+  background-color: #056797;
+}
+
+
+.modal-container .modal .actions .btn-cancel {
+  background-color: white;
+  border: solid 1px #ccc !important;
+  color: black;
+}
+
+
+.modal-container .modal .actions .btn-cancel:hover {
+  background-color: #eee;
+}
+
+
+/* Segundo modal */
+
+.modal-container .modal:nth-child(2) {
+  border-color: #e53935;
+}
+
+
+.modal-container .modal:nth-child(2) .btn-confirm {
+  background-color: #e53935;
+}
+
+
+.modal-container .modal:nth-child(2) .btn-confirm:hover {
+  background-color: #b71c1c;
+}
+
+
+
+@media screen and (max-width:600px){
+
+  .modal-container .modal {
+    width:90%;
+  }
+
+
+  .modal-container .modal .actions {
+    flex-direction: column;
+  }
+
+}

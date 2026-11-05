@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastrar y Soltar</title>
+    <link rel="stylesheet" href="estilos16.css">
+</head>
+<body>
+    <div class="upload-container">
+        <div class="title">SUBIR ARCHIVOS</div>
+        <div class="description">
+            Sube los archivos que deseas compartir con tu equipo
+        </div>
+        <div class="drag-drop">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 90" fill="none" width="120" height="60">
+                    <path d="M110 65H85c-9 0-16-7-16-16 0-7 5-13 12-15 2-9 10-16 20-16 11 0 20 9 20 20 6 1 11 6 11 13 0 8-7 14-15 14z" 
+                          stroke="#93b6f9" stroke-width="4" fill="white"/>
+                    <path d="M97 34v22M84 47l13-13 13 13" stroke="#93b6f9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div>
+                Arrastra y suelta los archivos aquí<br>
+                <br>O
+            </div>
+            <button class="btn">
+                Buscar archivos
+            </button>
+        </div>
+
+        <div class="title-section">
+            ARCHIVOS SUBIDOS (3)
+        </div>
+        <div class="uploaded-files">
+            <div class="file">
+                <div class="icon">
+                    <img src="imagen/word.png" width="48" alt="Word">
+                </div>
+                <div class="file-info">
+                    <span class="name">
+                        Portafolio en inglés.docx
+                    </span>
+                    <div class="progress">
+                        <div class="progress-60"></div>
+                    </div>
+                    <div class="size">
+                        60% completado
+                    </div>
+                </div>
+                <div class="actions">
+                    <button>⬇</button>
+                    <button>X</button>
+                </div>
+            </div>
+
+            <div class="file">
+                <div class="icon">
+                    <img src="imagen/excel.png" width="48" alt="Excel">
+                </div>
+                <div class="file-info">
+                    <span class="name">
+                        Reporte de ventas.xlsx
+                    </span>
+                    <div class="progress">
+                        <div class="progress-100"></div>
+                    </div>
+                    <div class="size">
+                        250 KB - Subido: 18/10/2026
+                    </div>
+                </div>
+                <div class="actions">
+                    <button>⬇</button>
+                    <button>X</button>
+                </div>
+            </div>
+
+            <div class="file">
+                <div class="icon">
+                    <img src="imagen/pdf.png" width="48" alt="PDF">
+                </div>
+                <div class="file-info">
+                    <span class="name">
+                        Manual del proyecto.pdf
+                    </span>
+                    <div class="progress">
+                        <div class="progress-100"></div>
+                    </div>
+                    <div class="size">
+                        1.5 MB - Subido: 18/10/2026
+                    </div>
+                </div>
+                <div class="actions">
+                    <button>⬇</button>
+                    <button>X</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            Formatos permitidos: PDF, Word, Excel, PowerPoint, JPG y PNG.
+            <br>
+            Tamaño máximo permitido: 20 MB.
+        </div>
+
+        <button class="btn">
+            Subir otro archivo
+        </button>
+    </div>
+</body>
+</html>

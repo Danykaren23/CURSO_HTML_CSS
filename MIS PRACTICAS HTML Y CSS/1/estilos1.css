@@ -1,0 +1,147 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif Garamond, Haettenschweiler, sans-serif, Helvetica, sans-serif;
+}
+
+nav {
+  background-color: rgb(87, 119, 92);
+  color: white;
+  width: 100%;
+}
+
+nav .mobile {
+  display: none;
+}
+
+nav .logo {
+  min-width: 250px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 20px 25px;
+}
+
+nav a:hover {
+  color: rgb(186, 218, 101);
+  background-color: rgb(0, 195, 255);
+}
+
+nav .desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary {
+  display: flex;
+}
+
+nav .secondary.full {
+}
+
+nav .secondary.mini {
+  display: none;
+}
+
+/* Estilos del desplegable Iniciar Sesión */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  padding: 20px 25px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(87, 119, 92);
+  min-width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  padding: 12px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 894px) {
+  nav .logo {
+    min-width: 100px;
+  }
+
+  nav .secondary.full {
+    display: none;
+  }
+
+  nav .secondary.mini {
+    display: block;
+  }
+
+  nav .secondary.mini .submenu {
+    position: absolute;
+    display: none;
+    background-color: rgb(87, 119, 92);
+  }
+
+  nav .secondary.mini:hover .submenu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 516px) {
+  nav .desktop {
+    display: none;
+  }
+
+  nav .mobile {
+    display: block;
+  }
+
+  nav .mobile .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav .mobile .header .logo {
+    flex: 1;
+    text-align: center;
+  }
+
+  nav .mobile .header .more button {
+    padding: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+  }
+
+  nav .mobile .header .more button:hover {
+    background-color: white;
+    color: black;
+  }
+
+  nav .mobile .links {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  nav .mobile .dropdown-content {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+}
