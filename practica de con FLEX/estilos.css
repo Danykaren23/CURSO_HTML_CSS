@@ -1,21 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
 }
 
 .header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #1a6af3;
-    padding: 25px 30px;
-    width: 100%;
+    background-color: #0859e4;
+    padding: 25px;
+    height: 20px;
 }
 
 .logo {
@@ -24,8 +18,10 @@ body {
     font-weight: bold;
 }
 
+
 .menu {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     gap: 30px;
@@ -35,18 +31,4 @@ body {
     color: white;
     text-decoration: none;
     font-size: 16px;
-}
-
-@media (max-width: 600px) {
-    .header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 12px;
-    }
 }
