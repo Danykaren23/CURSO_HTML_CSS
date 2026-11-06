@@ -1,60 +1,128 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f1f5f9;
-    margin: 0;
-    padding: 30px;
+body{
+  background:#8da9d4;
+  padding:40px 20px;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-h1 {
-    text-align: center;
-    color: #1e293b;
+
+.servicios{
+  background:white;
+  max-width:900px;
+  margin:auto;
+  padding:50px 40px 0;
+  text-align:center;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:15px;
 }
 
-h2 {
-    color: #334155;
-    font-size: 20px;
+.servicios h1{
+  color:#0a0a3d;
+  font-size:30px;
 }
 
-.contenedor-ejemplo {
-    background-color: white;
-    padding: 20px;
-    margin: 25px auto;
-    max-width: 850px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px #00000015;
+.servicios > p{
+  color:#333;
+  font-size:14px;
+  max-width:550px;
 }
 
-/* Estilos de las cajas */
-.caja {
-    width: 150px;
-    height: 50px;
-    background-color: #2563eb;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    margin: 5px;
+.servicios i{
+  color:#0a0a3d;
+  font-size:45px;
 }
 
-/* EJEMPLO 1: SIN FLEXBOX */
-.contenedor-normal {
-    background-color: #e2e8f0;
-    height: 200px;
-    padding: 15px;
-    border: 2px dashed #64748b;
+
+/* TARJETAS */
+.contenedor{
+  background:#0a0a3d;
+  width:calc(100% + 80px);
+  padding:30px 40px;
+  margin-top:20px;
+
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
-/* EJEMPLO 2: CON FLEXBOX */
-.contenedor-flex {
-    display: flex;
-    align-items: center;
-    align-items: flex-end;
-    align-items: first baseline;
-    background-color: #dbeafe;
-    height: 200px;
-    padding: 15px;
-    border: 2px dashed #2563eb;
+.tarjeta{
+  background:white;
+  width:250px;
+  padding:25px 20px;
+  text-align:left;
+
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.tarjeta i{
+  color:#777;
+  font-size:35px;
+}
+
+.tarjeta h2{
+  color:#0a0a3d;
+  font-size:16px;
+}
+
+.tarjeta p{
+  color:#444;
+  font-size:13px;
+  line-height:1.5;
+}
+
+
+/* BOTON */
+.boton{
+  background:#0a0a3d;
+  width:calc(100% + 80px);
+  padding-bottom:35px;
+
+  display:flex;
+  justify-content:center;
+}
+
+.boton a{
+  background:#2b5cff;
+  color:white;
+  text-decoration:none;
+  padding:10px 25px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+
+/* GALERIA */.imagen{
+  background:white;
+  max-width:900px;
+  margin:20px auto 0;
+  padding:30px 40px;
+  text-align:center;
+
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.imagen h2{
+  color:#0a0a3d;
+}
+
+
+.imagenes{
+  display:grid;
+  grid-template-columns:repeat(3,180px);
+  justify-content:center;
+  gap:10px;
+}
+
+.imagenes img{
+  width:180px;
+  height:150px;
+  object-fit:cover;
 }
