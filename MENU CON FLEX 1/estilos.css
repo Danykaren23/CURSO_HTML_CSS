@@ -30,7 +30,7 @@ body {
 }
 
 
-/* NAVEGACIÓN */
+/* NAVEGACIÓN (menu) */
 .menu {
     display: flex;
     flex-direction: column;
