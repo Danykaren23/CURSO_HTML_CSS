@@ -77,19 +77,17 @@ h2 {
     font-weight: bold;
 }
 
-/* OPERATIVO */
 .operativo {
     background-color: #dcfce7;
     color: #166534;
 }
 
-/* MANTENIMIENTO */
 .mantenimiento {
     background-color: #f8debc;
     color: #9a3412;
 }
 
-/* PENDIENTE */
+
 .pendiente {
     background-color: #fee2e2;
     color: #991b1b;
