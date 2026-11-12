@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    padding: 10px;
+}
+/* TITULO */
+h2 {
+    text-align: center;
+    margin: 20px;
+    font-size: 24px;
+    color: #47ce11;
+}
+
+.contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* TABLA */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ENCABEZADO DE LA TABLA*/
+.tabla thead {
+    background-color: #0741e2;
+    color: white;
+}
+
+.tabla th {
+    padding: 17px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* FILA */
+.tabla td {
+    padding: 16px;
+    font-size: 15px;
+    color: #475569;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* ESTADO */
+.estado {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* OPERATIVO */
+.operativo {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+/* MANTENIMIENTO */
+.mantenimiento {
+    background-color: #f8debc;
+    color: #9a3412;
+}
+
+/* PENDIENTE */
+.pendiente {
+    background-color: #fee2e2;
+    color: #991b1b;
+}

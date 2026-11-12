@@ -1,130 +1,129 @@
-body{
-    background:#8da9d4;
-    padding:50px 20px;
-    font-family:Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.servicios{
-    background:white;
-    max-width:980px;
-    margin:auto;
-    padding:70px 50px 40px;
-    text-align:center;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+body {
+    background: #b0e9e4;
+    padding: 50px 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
-
-.servicios h1{
-    color:#1616f8;
-    font-size:30px;
-    margin-bottom:20px;
+.servicios {
+    background: #f7f9fc;
+    max-width: 850px;
+    width: 100%;
+    margin: auto;
+    padding: 65px 35px 40px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.servicios p{
-    color:#555;
-    font-size:15px;
-    margin-bottom:40px;
-    max-width:560px;
+.servicios .subtitulo {
+    color: #5676aa;
+    font-size: 18px;
+    margin-bottom: 12px;
 }
-
-.contenedor{
-    background:#08083d;
-    width:calc(100% + 100px);
-    padding:0 50px 30px;
-    margin-top:130px;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    gap:25px;
-    row-gap:25px;
-    flex-wrap:wrap;
+.servicios h1 {
+    color: hsl(240, 86%, 46%);
+    font-size: 30px;
+    margin-bottom: 20px;
 }
-
-.tarjeta{
-    background:white;
-    width:260px;
-    min-height:260px;
-    padding:30px 20px;
-    text-align:left;
-    margin-top:-130px;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    row-gap:12px;
+.servicios .descripcion {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 40px;
+    max-width: 560px;
 }
-
-.tarjeta .icono{
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
+.contenedor {
+    background: #08083d;
+    width: 100%;
+    padding: 0 35px 30px;
+    margin-top: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
-
-.tarjeta .icono i{
-    color:#257dcf;
-    font-size:35px;
+.tarjeta {
+    background: white;
+    width: calc((100% - 30px) / 3);
+    min-width: 180px;
+    min-height: 175px;
+    padding: 20px 15px;
+    margin-top: -100px;
+    text-align: left;
+    box-shadow: 0 2px 6px #cccccc;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
-
-.tarjeta h2{
-    color:#08083d;
-    font-size:17px;
-    margin-bottom:15px;
+.tarjeta .icono {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-
-.tarjeta p{
-    color:#555;
-    font-size:13px;
-    line-height:20px;
-    margin-bottom:0;
+.tarjeta .icono i {
+    color: #777;
+    font-size: 35px;
+    font-style: normal;
 }
-
-.tarjeta a{
-    color:#1a2a6c;
-    font-size:13px;
-    text-decoration:underline;
-    margin-top:auto;
+.tarjeta h2 {
+    color: #080807;
+    font-size: 17px;
+    margin-bottom: 15px;
 }
-
-.boton{
-    background:hsl(240, 77%, 14%);
-    width:calc(100% + 100px);
-    padding:30px;
-    display:flex;
-    justify-content:center;
+.tarjeta p {
+    color: #555;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 0;
 }
-
-.boton a{
-    background:#2d5cff;
-    color:white;
-    text-decoration:none;
-    padding:12px 35px;
-    border-radius:25px;
-    font-size:14px;
+.tarjeta a {
+    color: #1a2a6c;
+    font-size: 13px;
+    text-decoration: underline;
+    margin-top: auto;
 }
-
-.imagen{
-    background:white;
-    max-width:980px;
-    margin:25px auto;
-    padding:0;
-    text-align:center;
+.boton {
+    background: #08083d;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
 }
-
-.imagen h2{
-    color:#08083d;
-    margin-bottom:30px;
+.boton a {
+    background: #2709ce;
+    color: white;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-size: 14px;
 }
-
-.imagenes{
-    display:grid;
-    grid-template-columns:repeat(3,180px);
-    justify-content:center;
-    gap:10px;
+h1 {
+    max-width: 850px;
+    margin: 25px auto;
+    text-align: center;
+    color: #e40c78;
+    font-size: 25px;
 }
-
-.imagenes img{
-    width:180px;
-    height:150px;
-    object-fit:cover;
+.imagen {
+    background: #f7f9fc;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 25px;
+}
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.imagenes img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }

@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #334155;
+}
+
+/* CONTENEDOR GENERAL */
+.dashboard {
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.estadisticas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+/* TARJETAS */
+.tarjeta {
+    flex: 1;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    border-left: 5px solid;
+    min-height: 205px;
+}
+
+/* ICONO */
+.icono {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.tarjeta h2 {
+    font-size: 30px;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.tarjeta small {
+    font-size: 13px;
+    color: #84909c;
+}
+
+/* BORDES DE COLORES (TARJETAS) */
+.azul {
+    border-left-color: #2563eb;
+}
+
+.verde {
+    border-left-color: #16a34a;
+}
+
+.rojo {
+    border-left-color: #dc2626;
+}
+
+.naranja {
+    border-left-color: #ea580c;
+}
