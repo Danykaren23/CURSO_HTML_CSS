@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ body {
     background-color: #f1f5f9;
     padding: 10px;
 }
+
 /* TITULO */
 h2 {
     text-align: center;
@@ -22,33 +24,45 @@ h2 {
     overflow-x: auto;
 }
 
-/* TABLA */
 .tabla {
     width: 100%;
-    border-collapse: collapse;
+    min-width: 600px;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
 }
 
-/* ENCABEZADO DE LA TABLA*/
+/* ENCABEZADO */
 .tabla thead {
     background-color: #0741e2;
     color: white;
 }
 
+.tabla thead tr,
+.tabla tbody tr {
+    display: flex;
+    width: 100%;
+}
+
 .tabla th {
+    flex: 1;
     padding: 17px;
     text-align: left;
     font-size: 16px;
 }
 
-/* FILA */
+/* FILAS */
+.tabla tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
 .tabla td {
+    flex: 1;
     padding: 16px;
     font-size: 15px;
     color: #475569;
-    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
 }
 
 .tabla tbody tr:hover {
